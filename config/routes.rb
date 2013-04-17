@@ -1,4 +1,23 @@
 RailsProject::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
+  resources :contacts
+
+  resources :abouts
+
+  resources :cart_items
+
+  resources :artists
+
+  resources :records
+
+  resources :line_items
+
+  resources :orders
+
+  resources :customers
+
   resources :provinces
 
   # The priority is based upon order of creation:
